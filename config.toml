@@ -1,3 +1,4 @@
 languageCode = "en-us"
 title = "Mightu Homepage"
 baseurl = "http://blog.mightu.cc/"
+[params]
