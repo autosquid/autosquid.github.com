@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on Mightu Homepage</title>
+    <link>http://blog.mightu.cc/tags/programming/index.xml</link>
+    <description>Recent content in Programming on Mightu Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://blog.mightu.cc/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>3-layer architecture</title>
+      <link>http://blog.mightu.cc/blog/architect/</link>
+      <pubDate>Fri, 27 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/blog/architect/</guid>
+      <description>
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#org4b26b5e&#34;&gt;The Driver Layer&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#org0bea3cf&#34;&gt;The Logic Layer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#orgbb8d110&#34;&gt;The User Layer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a id=&#34;org4b26b5e&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;the-driver-layer&#34;&gt;The Driver Layer&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;possible back-ends&lt;/li&gt;
+&lt;li&gt;wrappers&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a id=&#34;org0bea3cf&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;the-logic-layer&#34;&gt;The Logic Layer&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;complicated logic&lt;/li&gt;
+&lt;li&gt;project oriented customization&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a id=&#34;orgbb8d110&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;the-user-layer&#34;&gt;The User Layer&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;scripts&lt;/li&gt;
+&lt;li&gt;utilities&lt;/li&gt;
+&lt;li&gt;apps.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

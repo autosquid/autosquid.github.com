@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Mightu Homepage</title>
+    <link>http://blog.mightu.cc/tags/python/index.xml</link>
+    <description>Recent content in Python on Mightu Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://blog.mightu.cc/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>matplot</title>
+      <link>http://blog.mightu.cc/blog/matplotlib/</link>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/blog/matplotlib/</guid>
+      <description>
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#org9359ebc&#34;&gt;Key Points:&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#org94efc6a&#34;&gt;multi-backends&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#org3d0611d&#34;&gt;Mostly used parts(Artist Layer)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#orgaca1a45&#34;&gt;Artist&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#orgf3d15c5&#34;&gt;attributes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#org5471d77&#34;&gt;Types:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#orgab0cf79&#34;&gt;Axis&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#org0214104&#34;&gt;Scripting Layer (pyplot)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I have to look up the manual every time I plot with &lt;strong&gt;matplotlib&lt;/strong&gt;, which quite frustrating.&lt;/p&gt;
+
+&lt;p&gt;There are posts on the same topic both in English and Chinese&lt;sup&gt;&lt;a id=&#34;fnr.1&#34; class=&#34;footref&#34; href=&#34;#fn.1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. This is a brief summarize of &lt;sup&gt;&lt;a id=&#34;fnr.1.100&#34; class=&#34;footref&#34; href=&#34;#fn.1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ll only list the key points, and only explain when necessary.&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#34;org9359ebc&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;key-points&#34;&gt;Key Points:&lt;/h1&gt;
+
+&lt;p&gt;&lt;a id=&#34;org94efc6a&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;multi-backends&#34;&gt;multi-backends&lt;/h2&gt;
+
+&lt;p&gt;You want to visualize with Qt/GDK/Gtk+ etc. to generate ps, pdf, svg, png etc. These dirty works are done by the backends by abstracting of existing plotting tools into:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;FigureCanvas&lt;/code&gt;, which encapsulates the concept of a surface to draw onto (e.g. &amp;ldquo;the paper&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Renderer&lt;/code&gt;, which does the drawing (e.g. &amp;ldquo;the paintbrush&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Event&lt;/code&gt;, which handles user inputs such as keyboard and mouse events.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from matplotlib.figure import Figure
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+
+fig    = Figure()
+canvas = FigureCanvas(fig)
+ax     = fig.add_axes([0.1, 0.1, 0.8, 0.8])
+
+line,  = ax.plot([0,1], [0,1])
+ax.set_title(&amp;quot;a straight line (OO)&amp;quot;)
+ax.set_xlabel(&amp;quot;x value&amp;quot;)
+ax.set_ylabel(&amp;quot;y value&amp;quot;)
+
+canvas.print_figure(&#39;demo.jpg&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In daily usage, only the &lt;code&gt;Canvas&lt;/code&gt; we have to care about occasionally. (e.g. the code above)&lt;/p&gt;
+
+&lt;p&gt;Exceptionally, we may want to tune the &lt;code&gt;events&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
+import matplotlib.pyplot as plt
+
+def on_press(event):
+    if event.inaxes is None: return
+    for line in event.inaxes.lines:
+        if event.key==&#39;t&#39;:
+            visible = line.get_visible()
+            line.set_visible(not visible)
+    event.inaxes.figure.canvas.draw()
+
+fig, ax = plt.subplots(1)
+fig.canvas.mpl_connect(&#39;key_press_event&#39;, on_press)
+
+ax.plot(np.random.rand(2, 20))
+plt.show()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a id=&#34;org3d0611d&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;mostly-used-parts-artist-layer&#34;&gt;Mostly used parts(Artist Layer)&lt;/h2&gt;
+
+&lt;p&gt;The Artist hierarchy is the middle layer of the matplotlib stack, where the majority of the most important objects reside.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;//www.aosabook.org/images/matplotlib/artists_tree.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#34;orgaca1a45&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;artist&#34;&gt;Artist&lt;/h2&gt;
+
+&lt;p&gt;The Artist is the object that knows how to take the Renderer (the paintbrush) and put ink on the canvas.&lt;/p&gt;
+
+&lt;p&gt;Everything in a &lt;code&gt;Figure&lt;/code&gt; is an Artist instance: it&amp;rsquo;s the base class (&lt;code&gt;matplotlib.artist.Artist&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#34;orgf3d15c5&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;attributes&#34;&gt;attributes&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;the transformation from the artist coordinate system to the canvas coordinate system&lt;/li&gt;
+&lt;li&gt;the visibility, the clip box&lt;/li&gt;
+&lt;li&gt;the label, and the interface to handle user interaction such as &amp;ldquo;picking&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;others&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a id=&#34;org5471d77&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;types&#34;&gt;Types:&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Primitive artists: Line2D, Rectangle, Circle, and Text.&lt;/li&gt;
+&lt;li&gt;Composite artists: Axis, Tick, Axes, and Figure.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a id=&#34;orgab0cf79&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;axis&#34;&gt;Axis&lt;/h3&gt;
+
+&lt;p&gt;Axis is the most important artist we can never avoid: it is where most of the &lt;code&gt;matplotlib&lt;/code&gt; API plotting methods are defined.&lt;/p&gt;
+
+&lt;p&gt;It contains most of the graphical elements that make up the background of the plot—the ticks, the axis lines, the grid, the patch of color which is the plot background, and contains numerous helper methods that create primitive artists and add them to the Axes instance.&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#34;org0214104&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;scripting-layer-pyplot&#34;&gt;Scripting Layer (pyplot)&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code&gt;pyplot&lt;/code&gt; layer is for everyday purposes, particularly for interactive exploratory work by bench scientists who are not professional programmers.&lt;/p&gt;
+
+&lt;p&gt;Here we need to know what is going on behind:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;When the pyplot module is loaded, it parses a local configuration file in which the user states, among many other things, their preference for a default backend.&lt;/li&gt;
+&lt;li&gt;For a &lt;code&gt;plotting&lt;/code&gt; command, pyplot will check its internal data structures to see if there is a current Figure instance, and then re-use or create one accordingly.&lt;/li&gt;
+&lt;li&gt;A &lt;code&gt;show&lt;/code&gt; command, will force the &lt;code&gt;Figure&lt;/code&gt; to render.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;footnotes&#34;&gt;Footnotes&lt;/h2&gt;
+
+&lt;p&gt;&lt;sup&gt;&lt;a id=&#34;fn.1&#34; class=&#34;footnum&#34; href=&#34;#fnr.1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;a href=&#34;http://www.aosabook.org/en/matplotlib.html&#34;&gt;http://www.aosabook.org/en/matplotlib.html&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
