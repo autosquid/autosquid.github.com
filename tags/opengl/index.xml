@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Opengl on Mightu Homepage</title>
+    <link>http://blog.mightu.cc/tags/opengl/index.xml</link>
+    <description>Recent content in Opengl on Mightu Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://blog.mightu.cc/tags/opengl/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>computing the OpenGL projection matrix from intrinsic camera parameters</title>
+      <link>http://blog.mightu.cc/glproj/</link>
+      <pubDate>Sun, 29 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/glproj/</guid>
+      <description>
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sec-1&#34;&gt;Comments&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sec-2&#34;&gt;Other Excellent Posts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;comments-a-id-sec-1-a&#34;&gt;Comments&lt;a id=&#34;sec-1&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The problem could be solved by checking the correspondences between GL matrices and cv intrinsics&lt;sup&gt;&lt;a id=&#34;fnr.1&#34; class=&#34;footref&#34; href=&#34;#fn.1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;Or, in a two-stepped approach &lt;sup&gt;&lt;a id=&#34;fnr.2&#34; class=&#34;footref&#34; href=&#34;#fn.2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;other-excellent-posts-a-id-sec-2-a&#34;&gt;Other Excellent Posts&lt;a id=&#34;sec-2&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.songho.ca/opengl/gl_projectionmatrix.html&#34;&gt;http://www.songho.ca/opengl/gl_projectionmatrix.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://strawlab.org/2011/11/05/augmented-reality-with-OpenGL&#34;&gt;https://strawlab.org/2011/11/05/augmented-reality-with-OpenGL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://jamesgregson.blogspot.com/2011/11/matching-calibrated-cameras-with-opengl.html&#34;&gt;http://jamesgregson.blogspot.com/2011/11/matching-calibrated-cameras-with-opengl.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gist.github.com/astraw/1341472#file_projection_math.py&#34;&gt;https://gist.github.com/astraw/1341472#file_projection_math.py&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
