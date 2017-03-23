@@ -10,7 +10,7 @@
     <atom:link href="http://blog.mightu.cc/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Simply Outlier Removal</title>
+      <title>Simple Outlier Removal</title>
       <link>http://blog.mightu.cc/outlier-removal-1/</link>
       <pubDate>Thu, 23 Mar 2017 00:00:00 +0000</pubDate>
       
@@ -18,10 +18,10 @@
       <description>
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#org942d815&#34;&gt;Mean/Std Based&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#org1d770ae&#34;&gt;Mean/Std Based&lt;/a&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#orgdf6d31e&#34;&gt;(Inter)Quartertile Based&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#org8c39fe8&#34;&gt;(Inter)Quartertile Based&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -29,7 +29,7 @@
 
 &lt;p&gt;The two methods in this post are both statistics-based.&lt;/p&gt;
 
-&lt;p&gt;&lt;a id=&#34;org942d815&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#34;org1d770ae&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;mean-std-based&#34;&gt;Mean/Std Based&lt;/h1&gt;
 
@@ -39,7 +39,7 @@
 
 &lt;p&gt;m usually ranges from 1.5 to 3.&lt;/p&gt;
 
-&lt;p&gt;&lt;a id=&#34;orgdf6d31e&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#34;org8c39fe8&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;inter-quartertile-based&#34;&gt;(Inter)Quartertile Based&lt;/h1&gt;
 
