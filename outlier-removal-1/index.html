@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-	<meta name="generator" content="Hugo 0.19" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="HandheldFriendly" content="True">
@@ -19,10 +18,10 @@
     <title>
       
       
-         Mightu Homepage 
+         Simply Outlier Removal 
       
     </title>
-    <link rel="canonical" href="http://blog.mightu.cc/">
+    <link rel="canonical" href="http://blog.mightu.cc/outlier-removal-1/">
 
     <style>
   * {
@@ -380,8 +379,6 @@
     <link rel="shortcut icon" href="/favicon.ico">
 
     
-      <link href="http://blog.mightu.cc/index.xml" rel="alternate" type="application/rss+xml" title="Mightu Homepage" />
-    
   </head>
 
   <body>
@@ -400,63 +397,62 @@
 
 
 <section id=content>
-  <ul class=posts_listing>
+  <h1> Simply Outlier Removal </h1>
+
+  <div id=sub-header>
+    March 2017 · 1 minute read
+  </div>
+
+  <div class="entry-content">
     
-      <li>
-        <h2><a href="http://blog.mightu.cc/outlier-removal-1/">Simply Outlier Removal</a></h2>
-        <div id=date>
-          <time>March 2017</time>
-        </div>
-      </li>
+
+<ul>
+<li><a href="#org1bdd3f6">Mean/Std Based</a>
+
+<ul>
+<li><a href="#org68ed222">(Inter)Quartertile Based</a></li>
+</ul></li>
+</ul>
+
+<p>This is a large topic, and I will write another post to introduce it systematically, and also give more methods which are at the same time more sophisticated.</p>
+
+<p>The two methods in this post are both statistics-based.</p>
+
+<p><a id="org1bdd3f6"></a></p>
+
+<h1 id="mean-std-based">Mean/Std Based</h1>
+
+<pre><code class="language-python">def reject_outliers(data, m=2):
+    return data[abs(data - np.mean(data)) &lt; m * np.std(data)]
+</code></pre>
+
+<p>m usually ranges from 1.5 to 3.</p>
+
+<p><a id="org68ed222"></a></p>
+
+<h1 id="inter-quartertile-based">(Inter)Quartertile Based</h1>
+
+<pre><code class="language-python">def reject_outliers(sr, iq_range=0.5):
+    pcnt = (1 - iq_range) / 2
+    qlow, median, qhigh = sr.dropna().quantile([pcnt, 0.50, 1-pcnt])
+    iqr = qhigh - qlow
+    return sr[ (sr - median).abs() &lt;= iqr]
+</code></pre>
+
+<p>Also, note that (\delta \approx 1.4826 MAD), where MAD is for median absolute deviation, i.e., $MAD = median \left(\ \left|X<sub>i</sub>- median (X)\right|\ \right),\,$</p>
+
+  </div>
+
+  <div id=links>
     
-      <li>
-        <h2><a href="http://blog.mightu.cc/blog/glproj/">computing the OpenGL projection matrix from intrinsic camera parameters</a></h2>
-        <div id=date>
-          <time>January 2017</time>
-        </div>
-      </li>
     
-      <li>
-        <h2><a href="http://blog.mightu.cc/blog/architect/">3-layer architecture</a></h2>
-        <div id=date>
-          <time>January 2017</time>
-        </div>
-      </li>
-    
-      <li>
-        <h2><a href="http://blog.mightu.cc/blog/a_new_site/">A New Site</a></h2>
-        <div id=date>
-          <time>January 2017</time>
-        </div>
-      </li>
-    
-      <li>
-        <h2><a href="http://blog.mightu.cc/blog/gist/">gists</a></h2>
-        <div id=date>
-          <time>January 2017</time>
-        </div>
-      </li>
-    
-      <li>
-        <h2><a href="http://blog.mightu.cc/blog/matplotlib/">matplot</a></h2>
-        <div id=date>
-          <time>November 2016</time>
-        </div>
-      </li>
-    
-      <li>
-        <h2><a href="http://blog.mightu.cc/blog/quine/">Quine</a></h2>
-        <div id=date>
-          <time>September 2016</time>
-        </div>
-      </li>
-    
-  </ul>
+  </div>
 </section>
 
   </div>
   
 </body>
 </html>
+
 
 
