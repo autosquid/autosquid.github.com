@@ -400,17 +400,18 @@
   <h1> Simple Outlier Removal </h1>
 
   <div id=sub-header>
-    March 2017 · 1 minute read
+    March 2017 · 2 minute read
   </div>
 
   <div class="entry-content">
     
 
 <ul>
-<li><a href="#org1d770ae">Mean/Std Based</a>
+<li><a href="#org8e511e7">Mean/Std Based</a>
 
 <ul>
-<li><a href="#org8c39fe8">(Inter)Quartertile Based</a></li>
+<li><a href="#orgddb1d2a">(Inter)Quartertile Based</a></li>
+<li><a href="#orgc311e39">Related</a></li>
 </ul></li>
 </ul>
 
@@ -418,7 +419,7 @@
 
 <p>The two methods in this post are both statistics-based.</p>
 
-<p><a id="org1d770ae"></a></p>
+<p><a id="org8e511e7"></a></p>
 
 <h1 id="mean-std-based">Mean/Std Based</h1>
 
@@ -428,7 +429,7 @@
 
 <p>m usually ranges from 1.5 to 3.</p>
 
-<p><a id="org8c39fe8"></a></p>
+<p><a id="orgddb1d2a"></a></p>
 
 <h1 id="inter-quartertile-based">(Inter)Quartertile Based</h1>
 
@@ -441,10 +442,64 @@
 
 <p>Also, note that (\delta \approx 1.4826 MAD), where MAD is for median absolute deviation, i.e., $MAD = median \left(\ \left|X<sub>i</sub>- median (X)\right|\ \right),\,$</p>
 
+<p>Or, with median and MAD, we have:</p>
+
+<pre><code class="language-python">def is_outlier(points, thresh=3.5):
+    &quot;&quot;&quot;
+    Returns a boolean array with True if points are outliers and False
+    otherwise.
+    Parameters:
+    -----------
+        points : An numobservations by numdimensions array of observations
+        thresh : The modified z-score to use as a threshold. Observations with
+            a modified z-score (based on the median absolute deviation) greater
+            than this value will be classified as outliers.
+    Returns:
+    --------
+        mask : A numobservations-length boolean array.
+    References:
+    ----------
+        Boris Iglewicz and David Hoaglin (1993), &quot;Volume 16: How to Detect and
+        Handle Outliers&quot;, The ASQC Basic References in Quality Control:
+        Statistical Techniques, Edward F. Mykytka, Ph.D., Editor.
+    &quot;&quot;&quot;
+    if len(points.shape) == 1:
+        points = points[:,None]
+    median = np.median(points, axis=0)
+    diff = np.sum((points - median)**2, axis=-1)
+    diff = np.sqrt(diff)
+    med_abs_deviation = np.median(diff)
+
+    modified_z_score = 0.6745 * diff / med_abs_deviation
+
+    return modified_z_score &gt; thresh
+</code></pre>
+
+<p>Simpler version:</p>
+
+<pre><code class="language-python">def reject_outliers(data, m = 2.):
+    d = np.abs(data - np.median(data))
+    mdev = np.median(d)
+    s = d/mdev if mdev else 0.
+    return data[s&lt;m]
+</code></pre>
+
+<p>These are contrasted with conventional measures of scale, such as sample variance or sample standard deviation, which are non-robust, meaning greatly influenced by outliers.</p>
+
+<p><a id="orgc311e39"></a></p>
+
+<h1 id="related">Related</h1>
+
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Robust_measures_of_scale#IQR_and_MAD">https://en.wikipedia.org/wiki/Robust_measures_of_scale#IQR_and_MAD</a></li>
+</ol>
+
   </div>
 
   <div id=links>
     
+    
+      <a class="basic-alignment left" href="http://blog.mightu.cc/learningpdb/">Learning pdb &raquo;</a>
     
   </div>
 </section>

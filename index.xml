@@ -6,8 +6,73 @@
     <description>Recent content on Mightu Homepage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Apr 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://blog.mightu.cc/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Learning pdb</title>
+      <link>http://blog.mightu.cc/learningpdb/</link>
+      <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/learningpdb/</guid>
+      <description>
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#org9541c84&#34;&gt;hard-coded breakpoints&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#orge0b40b2&#34;&gt;pdb commands&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#org50de7f8&#34;&gt;advanced topics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#org5f42c5a&#34;&gt;comments:&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I met a ```pdb``` tutorial on Github; here is the link: &lt;a href=&#34;https://github.com/spiside/pdb-tutorial&#34;&gt;https://github.com/spiside/pdb-tutorial&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This is the note I made while reading.&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#34;org9541c84&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;hard-coded-breakpoints&#34;&gt;hard-coded breakpoints&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pdb; pdb.set_trace()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a id=&#34;orge0b40b2&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;pdb-commands&#34;&gt;pdb commands&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;l(list) [first [,last])&lt;/li&gt;
+&lt;li&gt;s(tep)&lt;/li&gt;
+&lt;li&gt;n(ext)&lt;/li&gt;
+&lt;li&gt;b(reak)&lt;/li&gt;
+&lt;li&gt;r(eturn)&lt;/li&gt;
+&lt;li&gt;h(elp)&lt;/li&gt;
+&lt;li&gt;cl(ear)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;8 c(continue)&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#34;org50de7f8&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;advanced-topics&#34;&gt;advanced topics&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;! (bang), indicates the next line is Python command and not a ```pdb``` command&lt;/li&gt;
+&lt;li&gt;Post Mortem: post&lt;sub&gt;mortem&lt;/sub&gt;/ pm&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a id=&#34;org5f42c5a&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;comments&#34;&gt;comments:&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;for a full list of pdb commands: &lt;a href=&#34;https://docs.python.org/2/library/pdb.html&#34;&gt;https://docs.python.org/2/library/pdb.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;invoke &lt;code&gt;pdb.py&lt;/code&gt; as a script to debug other scrips: &lt;code&gt;python -m pdb myscript.py&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     
     <item>
       <title>Simple Outlier Removal</title>
@@ -18,10 +83,11 @@
       <description>
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#org1d770ae&#34;&gt;Mean/Std Based&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#org8e511e7&#34;&gt;Mean/Std Based&lt;/a&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#org8c39fe8&#34;&gt;(Inter)Quartertile Based&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#orgddb1d2a&#34;&gt;(Inter)Quartertile Based&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#orgc311e39&#34;&gt;Related&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -29,7 +95,7 @@
 
 &lt;p&gt;The two methods in this post are both statistics-based.&lt;/p&gt;
 
-&lt;p&gt;&lt;a id=&#34;org1d770ae&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#34;org8e511e7&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;mean-std-based&#34;&gt;Mean/Std Based&lt;/h1&gt;
 
@@ -39,7 +105,7 @@
 
 &lt;p&gt;m usually ranges from 1.5 to 3.&lt;/p&gt;
 
-&lt;p&gt;&lt;a id=&#34;org8c39fe8&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#34;orgddb1d2a&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;inter-quartertile-based&#34;&gt;(Inter)Quartertile Based&lt;/h1&gt;
 
@@ -51,6 +117,58 @@
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Also, note that (\delta \approx 1.4826 MAD), where MAD is for median absolute deviation, i.e., $MAD = median \left(\ \left|X&lt;sub&gt;i&lt;/sub&gt;- median (X)\right|\ \right),\,$&lt;/p&gt;
+
+&lt;p&gt;Or, with median and MAD, we have:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def is_outlier(points, thresh=3.5):
+    &amp;quot;&amp;quot;&amp;quot;
+    Returns a boolean array with True if points are outliers and False
+    otherwise.
+    Parameters:
+    -----------
+        points : An numobservations by numdimensions array of observations
+        thresh : The modified z-score to use as a threshold. Observations with
+            a modified z-score (based on the median absolute deviation) greater
+            than this value will be classified as outliers.
+    Returns:
+    --------
+        mask : A numobservations-length boolean array.
+    References:
+    ----------
+        Boris Iglewicz and David Hoaglin (1993), &amp;quot;Volume 16: How to Detect and
+        Handle Outliers&amp;quot;, The ASQC Basic References in Quality Control:
+        Statistical Techniques, Edward F. Mykytka, Ph.D., Editor.
+    &amp;quot;&amp;quot;&amp;quot;
+    if len(points.shape) == 1:
+        points = points[:,None]
+    median = np.median(points, axis=0)
+    diff = np.sum((points - median)**2, axis=-1)
+    diff = np.sqrt(diff)
+    med_abs_deviation = np.median(diff)
+
+    modified_z_score = 0.6745 * diff / med_abs_deviation
+
+    return modified_z_score &amp;gt; thresh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Simpler version:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def reject_outliers(data, m = 2.):
+    d = np.abs(data - np.median(data))
+    mdev = np.median(d)
+    s = d/mdev if mdev else 0.
+    return data[s&amp;lt;m]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;These are contrasted with conventional measures of scale, such as sample variance or sample standard deviation, which are non-robust, meaning greatly influenced by outliers.&lt;/p&gt;
+
+&lt;p&gt;&lt;a id=&#34;orgc311e39&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;related&#34;&gt;Related&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Robust_measures_of_scale#IQR_and_MAD&#34;&gt;https://en.wikipedia.org/wiki/Robust_measures_of_scale#IQR_and_MAD&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
     

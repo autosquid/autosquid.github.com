@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-	<meta name="generator" content="Hugo 0.19" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="HandheldFriendly" content="True">
@@ -19,10 +18,10 @@
     <title>
       
       
-         Mightu Homepage 
+         Learning pdb 
       
     </title>
-    <link rel="canonical" href="http://blog.mightu.cc/">
+    <link rel="canonical" href="http://blog.mightu.cc/learningpdb/">
 
     <style>
   * {
@@ -380,8 +379,6 @@
     <link rel="shortcut icon" href="/favicon.ico">
 
     
-      <link href="http://blog.mightu.cc/index.xml" rel="alternate" type="application/rss+xml" title="Mightu Homepage" />
-    
   </head>
 
   <body>
@@ -400,70 +397,84 @@
 
 
 <section id=content>
-  <ul class=posts_listing>
+  <h1> Learning pdb </h1>
+
+  <div id=sub-header>
+    April 2017 · 1 minute read
+  </div>
+
+  <div class="entry-content">
     
-      <li>
-        <h2><a href="http://blog.mightu.cc/learningpdb/">Learning pdb</a></h2>
-        <div id=date>
-          <time>April 2017</time>
-        </div>
-      </li>
+
+<ul>
+<li><a href="#org9541c84">hard-coded breakpoints</a>
+
+<ul>
+<li><a href="#orge0b40b2">pdb commands</a></li>
+<li><a href="#org50de7f8">advanced topics</a></li>
+<li><a href="#org5f42c5a">comments:</a></li>
+</ul></li>
+</ul>
+
+<p>I met a ```pdb``` tutorial on Github; here is the link: <a href="https://github.com/spiside/pdb-tutorial">https://github.com/spiside/pdb-tutorial</a></p>
+
+<p>This is the note I made while reading.</p>
+
+<p><a id="org9541c84"></a></p>
+
+<h1 id="hard-coded-breakpoints">hard-coded breakpoints</h1>
+
+<pre><code class="language-python">import pdb; pdb.set_trace()
+</code></pre>
+
+<p><a id="orge0b40b2"></a></p>
+
+<h1 id="pdb-commands">pdb commands</h1>
+
+<ol>
+<li>l(list) [first [,last])</li>
+<li>s(tep)</li>
+<li>n(ext)</li>
+<li>b(reak)</li>
+<li>r(eturn)</li>
+<li>h(elp)</li>
+<li>cl(ear)</li>
+</ol>
+
+<p>8 c(continue)</p>
+
+<p><a id="org50de7f8"></a></p>
+
+<h2 id="advanced-topics">advanced topics</h2>
+
+<ol>
+<li>! (bang), indicates the next line is Python command and not a ```pdb``` command</li>
+<li>Post Mortem: post<sub>mortem</sub>/ pm</li>
+</ol>
+
+<p><a id="org5f42c5a"></a></p>
+
+<h1 id="comments">comments:</h1>
+
+<ol>
+<li>for a full list of pdb commands: <a href="https://docs.python.org/2/library/pdb.html">https://docs.python.org/2/library/pdb.html</a></li>
+<li>invoke <code>pdb.py</code> as a script to debug other scrips: <code>python -m pdb myscript.py</code></li>
+</ol>
+
+  </div>
+
+  <div id=links>
     
-      <li>
-        <h2><a href="http://blog.mightu.cc/outlier-removal-1/">Simple Outlier Removal</a></h2>
-        <div id=date>
-          <time>March 2017</time>
-        </div>
-      </li>
+      <a class="basic-alignment left" href="http://blog.mightu.cc/outlier-removal-1/">&laquo; Simple Outlier Removal</a>
     
-      <li>
-        <h2><a href="http://blog.mightu.cc/blog/glproj/">computing the OpenGL projection matrix from intrinsic camera parameters</a></h2>
-        <div id=date>
-          <time>January 2017</time>
-        </div>
-      </li>
     
-      <li>
-        <h2><a href="http://blog.mightu.cc/blog/architect/">3-layer architecture</a></h2>
-        <div id=date>
-          <time>January 2017</time>
-        </div>
-      </li>
-    
-      <li>
-        <h2><a href="http://blog.mightu.cc/blog/a_new_site/">A New Site</a></h2>
-        <div id=date>
-          <time>January 2017</time>
-        </div>
-      </li>
-    
-      <li>
-        <h2><a href="http://blog.mightu.cc/blog/gist/">gists</a></h2>
-        <div id=date>
-          <time>January 2017</time>
-        </div>
-      </li>
-    
-      <li>
-        <h2><a href="http://blog.mightu.cc/blog/matplotlib/">matplot</a></h2>
-        <div id=date>
-          <time>November 2016</time>
-        </div>
-      </li>
-    
-      <li>
-        <h2><a href="http://blog.mightu.cc/blog/quine/">Quine</a></h2>
-        <div id=date>
-          <time>September 2016</time>
-        </div>
-      </li>
-    
-  </ul>
+  </div>
 </section>
 
   </div>
   
 </body>
 </html>
+
 
 
