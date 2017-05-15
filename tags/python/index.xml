@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Mightu Homepage</title>
+    <link>http://blog.mightu.cc/tags/python/</link>
+    <description>Recent content in Python on Mightu Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.mightu.cc/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Learning pdb</title>
+      <link>http://blog.mightu.cc/learningpdb/</link>
+      <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/learningpdb/</guid>
+      <description>hard-coded breakpoints  pdb commands advanced topics comments:   I met a ```pdb``` tutorial on Github; here is the link: https://github.com/spiside/pdb-tutorial
+This is the note I made while reading.
+
+hard-coded breakpoints import pdb; pdb.set_trace()  
+pdb commands  l(list) [first [,last]) s(tep) n(ext) b(reak) r(eturn) h(elp) cl(ear)  8 c(continue)
+
+advanced topics  ! (bang), indicates the next line is Python command and not a ```pdb``` command Post Mortem: postmortem/ pm</description>
+    </item>
+    
+    <item>
+      <title>matplot</title>
+      <link>http://blog.mightu.cc/blog/matplotlib/</link>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/blog/matplotlib/</guid>
+      <description>Key Points:  multi-backends Mostly used parts(Artist Layer) Artist  attributes Types: Axis  Scripting Layer (pyplot)   I have to look up the manual every time I plot with matplotlib, which quite frustrating.
+There are posts on the same topic both in English and Chinese1. This is a brief summarize of 1.
+I&amp;rsquo;ll only list the key points, and only explain when necessary.
+
+Key Points:</description>
+    </item>
+    
+  </channel>
+</rss>

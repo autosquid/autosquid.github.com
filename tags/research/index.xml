@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Research on Mightu Homepage</title>
+    <link>http://blog.mightu.cc/tags/research/</link>
+    <description>Recent content in Research on Mightu Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.mightu.cc/tags/research/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Image Warping and Morphing</title>
+      <link>http://blog.mightu.cc/imagewarping/</link>
+      <pubDate>Mon, 15 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/imagewarping/</guid>
+      <description>This is related to the 13th lecture of CSCE411 from tamu: http://faculty.cs.tamu.edu/jchai/csce441_spring13/lectures.html
+Image warpings are basically mappings in spatial domain.
+As introduced in the Selziski book, fundamental transformations include: similarity, affine, perspective transformations.
+Beside, we can irregularly warp images using control points, therefore, we have to study optimal sampling/interpolation methods.
+As an application, image morphing interpolate two images (after correspondences are found).</description>
+    </item>
+    
+  </channel>
+</rss>

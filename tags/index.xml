@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Mightu Homepage</title>
+    <link>http://blog.mightu.cc/tags/</link>
+    <description>Recent content in Tags on Mightu Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.mightu.cc/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Announcement</title>
+      <link>http://blog.mightu.cc/tags/announcement/</link>
+      <pubDate>Fri, 27 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/tags/announcement/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Architecture</title>
+      <link>http://blog.mightu.cc/tags/architecture/</link>
+      <pubDate>Fri, 27 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gist</title>
+      <link>http://blog.mightu.cc/tags/gist/</link>
+      <pubDate>Tue, 24 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/tags/gist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>http://blog.mightu.cc/tags/git/</link>
+      <pubDate>Tue, 24 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Matplot</title>
+      <link>http://blog.mightu.cc/tags/matplot/</link>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/tags/matplot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Opengl</title>
+      <link>http://blog.mightu.cc/tags/opengl/</link>
+      <pubDate>Sun, 29 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/tags/opengl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pdb</title>
+      <link>http://blog.mightu.cc/tags/pdb/</link>
+      <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/tags/pdb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>http://blog.mightu.cc/tags/programming/</link>
+      <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>http://blog.mightu.cc/tags/python/</link>
+      <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quine</title>
+      <link>http://blog.mightu.cc/tags/quine/</link>
+      <pubDate>Sun, 25 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/tags/quine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Research</title>
+      <link>http://blog.mightu.cc/tags/research/</link>
+      <pubDate>Mon, 15 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/tags/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sci</title>
+      <link>http://blog.mightu.cc/tags/sci/</link>
+      <pubDate>Thu, 23 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/tags/sci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vision</title>
+      <link>http://blog.mightu.cc/tags/vision/</link>
+      <pubDate>Mon, 15 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/tags/vision/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

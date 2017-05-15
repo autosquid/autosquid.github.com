@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pdb on Mightu Homepage</title>
+    <link>http://blog.mightu.cc/tags/pdb/</link>
+    <description>Recent content in Pdb on Mightu Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.mightu.cc/tags/pdb/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Learning pdb</title>
+      <link>http://blog.mightu.cc/learningpdb/</link>
+      <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/learningpdb/</guid>
+      <description>hard-coded breakpoints  pdb commands advanced topics comments:   I met a ```pdb``` tutorial on Github; here is the link: https://github.com/spiside/pdb-tutorial
+This is the note I made while reading.
+
+hard-coded breakpoints import pdb; pdb.set_trace()  
+pdb commands  l(list) [first [,last]) s(tep) n(ext) b(reak) r(eturn) h(elp) cl(ear)  8 c(continue)
+
+advanced topics  ! (bang), indicates the next line is Python command and not a ```pdb``` command Post Mortem: postmortem/ pm</description>
+    </item>
+    
+  </channel>
+</rss>

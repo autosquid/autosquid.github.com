@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sci on Mightu Homepage</title>
+    <link>http://blog.mightu.cc/tags/sci/</link>
+    <description>Recent content in Sci on Mightu Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Mar 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.mightu.cc/tags/sci/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simple Outlier Removal</title>
+      <link>http://blog.mightu.cc/outlier-removal-1/</link>
+      <pubDate>Thu, 23 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/outlier-removal-1/</guid>
+      <description>Mean/Std Based  (Inter)Quartertile Based Related   This is a large topic, and I will write another post to introduce it systematically, and also give more methods which are at the same time more sophisticated.
+The two methods in this post are both statistics-based.
+
+Mean/Std Based def reject_outliers(data, m=2): return data[abs(data - np.mean(data)) &amp;lt; m * np.std(data)]  m usually ranges from 1.5 to 3.</description>
+    </item>
+    
+  </channel>
+</rss>

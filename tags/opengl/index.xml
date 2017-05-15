@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Opengl on Mightu Homepage</title>
+    <link>http://blog.mightu.cc/tags/opengl/</link>
+    <description>Recent content in Opengl on Mightu Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 29 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.mightu.cc/tags/opengl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>computing the OpenGL projection matrix from intrinsic camera parameters</title>
+      <link>http://blog.mightu.cc/blog/glproj/</link>
+      <pubDate>Sun, 29 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/blog/glproj/</guid>
+      <description>  My Comments  Other Excellent Posts   Summary   The problem could be solved by checking the correspondences between GL matrices and cv intrinsics1 Or, in a two-stepped approach2  Excellent Posts  http://www.songho.ca/opengl/gl_projectionmatrix.html https://strawlab.org/2011/11/05/augmented-reality-with-OpenGL http://jamesgregson.blogspot.com/2011/11/matching-calibrated-cameras-with-opengl.html https://gist.github.com/astraw/1341472#file_projection_math.py   http://kgeorge.github.io/2014/03/08/calculating-opengl-perspective-matrix-from-opencv-intrinsic-matrix [return] http://ksimek.github.io/2013/06/03/calibrated_cameras_in_opengl [return]   </description>
+    </item>
+    
+  </channel>
+</rss>

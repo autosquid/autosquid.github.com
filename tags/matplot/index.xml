@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Matplot on Mightu Homepage</title>
+    <link>http://blog.mightu.cc/tags/matplot/</link>
+    <description>Recent content in Matplot on Mightu Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Nov 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://blog.mightu.cc/tags/matplot/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>matplot</title>
+      <link>http://blog.mightu.cc/blog/matplotlib/</link>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.mightu.cc/blog/matplotlib/</guid>
+      <description>Key Points:  multi-backends Mostly used parts(Artist Layer) Artist  attributes Types: Axis  Scripting Layer (pyplot)   I have to look up the manual every time I plot with matplotlib, which quite frustrating.
+There are posts on the same topic both in English and Chinese1. This is a brief summarize of 1.
+I&amp;rsquo;ll only list the key points, and only explain when necessary.
+
+Key Points:</description>
+    </item>
+    
+  </channel>
+</rss>
